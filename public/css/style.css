@@ -242,8 +242,11 @@ img {
   filter: none;
 }
 
-.article-ul:hover li {
-  filter: blur(3px);
+/* .article-ul:hover li {
+  filter: blur(1px);
+} */
+.article-ul li:hover  {
+  scale: 1.02;
 }
 
 .article-ul:hover li:hover {
