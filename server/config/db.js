@@ -4,13 +4,14 @@ const connectDB = async () => {
   try {
     mongoose.set("strictQuery", false);
     const conn = await mongoose.connect(process.env.MONGODB_URI, {
-      tls: true, // Specify TLS
-      tlsAllowInvalidCertificates: true, // This may be needed for self-signed certificates
-
+      tls: true,
+      tlsAllowInvalidCertificates: true,
     });
-    console.log(`data base connected: ${conn.connection.host}`);
+    console.log(`Database connected: ${conn.connection.host}`);
+    return conn; // Return the Mongoose connection object
   } catch (error) {
-    console.log(error);
+    console.error(error);
+    throw error; // Rethrow the error to be caught in the calling code
   }
 };
 
