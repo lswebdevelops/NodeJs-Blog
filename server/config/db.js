@@ -6,6 +6,7 @@ const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGODB_URI, {
       tls: true,
       tlsAllowInvalidCertificates: true,
+      ssl: true, 
     });
     console.log(`Database connected: ${conn.connection.host}`);
     return conn; // Return the Mongoose connection object
