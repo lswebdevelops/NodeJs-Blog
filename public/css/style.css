@@ -240,14 +240,13 @@ img {
 
 .article-ul li:hover {
   filter: none;
+  scale: 1.01;
 }
 
 /* .article-ul:hover li {
   filter: blur(1px);
 } */
-.article-ul li:hover  {
-  scale: 1.02;
-}
+
 
 .article-ul:hover li:hover {
   filter: none;
@@ -255,9 +254,15 @@ img {
 
 
 .article {
-  white-space: pre-wrap;
+  white-space: pre-line;
+  font-size: 1.2rem;
+  font-family: poets electra,Georgia,times new roman,serif;
 }
+.post-h1 {
+  font-size: 1.7rem;
+  font-family: poets electra,Georgia,times new roman,serif;
 
+}
 
 /* Footer */
 .footer {
@@ -290,7 +295,16 @@ img {
   text-decoration: none;
   font-size: .8rem;
   padding: 4px 8px;
+  font-family: poets electra,Georgia,times new roman,serif;
   line-height: 2;
+}
+ .admin-posts a {
+  text-decoration: none;;
+  font-size: 1.2rem;
+}
+ .admin-posts a:hover {
+  scale: 1.02;
+
 }
 
 .admin-posts li {
