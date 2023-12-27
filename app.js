@@ -8,7 +8,7 @@ const methodOverride = require('method-override')
 const connectDB = require("./server/config/db");
 const isActiveRoute = require('./server/helpers/routeHelpers')
 const app = express();
-const PORT = 5000 || process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 
 // connect to db
 
@@ -26,11 +26,11 @@ app.use(
     saveUninitialized: true,
     store: MongoStore.create({
       mongoUrl: process.env.MONGODB_URI
-    })
+    }),
 
     // cookie expiration date
-    // cookie: { maxAge: new Date (Date.now() + 3600000))}
-    // >> how to // Date.now() - 30 * 24 * 60 * 60 * 1000
+    cookie: { maxAge: 3600000}
+    
 
 
   })
